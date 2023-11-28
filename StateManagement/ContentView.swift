@@ -9,29 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var count: Int = 0
+    @StateObject var product = Product()
     
     var body: some View {
         VStack {
-            Image("computer")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding(10)
-            Text("NW-PC")
-                .font(.custom("Helvetica Neue Thin", size: 60))
-            Text("\(count)")
-                .font(.custom("Helvetica Neue Thin", size: 60))
-            Button {
-                //count += 1
-            } label: {
-                Text("Add to Cart")
-                    .padding(20)
-                    .font(.custom("Helvetica Neue Thin", size: 34))
-                    .background(Color.gray.opacity(0.5))
-                    .cornerRadius(20)
-            }
+            ProductDetailView(product: $product)
+            CartButtonView(count: $product.count)
         }
-        
     }
 }
 
@@ -40,3 +24,8 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+
+
+
