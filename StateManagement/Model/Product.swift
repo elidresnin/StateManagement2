@@ -7,8 +7,10 @@
 
 import Foundation
 
-class Product: ObservableObject{
-    @Published var count: Int
+struct Product: Identifiable{
+    var id = UUID()
+    
+    var count: Int
     var name: String
     var image: String
     var price: Double

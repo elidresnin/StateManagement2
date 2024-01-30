@@ -9,14 +9,16 @@ import SwiftUI
 
 struct ProductDetailView: View{
     
-    @Binding var product: Product
+    var product: Product
     
     var body: some View{
         VStack{
+            Spacer()
             Image(product.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .padding(10)
+            Spacer()
             HStack {
                 Text(product.name)
                     .font(.custom("Helvetica Neue Thin", size: 30))
@@ -28,8 +30,9 @@ struct ProductDetailView: View{
                 Spacer()
                 Text("Quantity: \(product.count)")
                     .font(.custom("Helvetica Neue Thin", size: 30))
-            }.padding(10) 
-        }
+            }.padding(10)
+            Spacer()
+        }.padding()
     }
 }
 struct ProductDetailView_Previews: PreviewProvider {
