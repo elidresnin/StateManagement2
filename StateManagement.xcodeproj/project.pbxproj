@@ -23,6 +23,8 @@
 		D07811A92B28CF8F003FB24B /* StoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07811A82B28CF8F003FB24B /* StoreView.swift */; };
 		D07811AB2B2A2CB8003FB24B /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07811AA2B2A2CB8003FB24B /* Cart.swift */; };
 		D07811AD2B2A3064003FB24B /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07811AC2B2A3064003FB24B /* CartView.swift */; };
+		D08DBC362B6C208200B9CFB2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08DBC352B6C208200B9CFB2 /* SignUpView.swift */; };
+		D08DBC3B2B6C2A2F00B9CFB2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D08DBC3A2B6C2A2F00B9CFB2 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		D07811A82B28CF8F003FB24B /* StoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreView.swift; sourceTree = "<group>"; };
 		D07811AA2B2A2CB8003FB24B /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		D07811AC2B2A3064003FB24B /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		D08DBC352B6C208200B9CFB2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		D08DBC3A2B6C2A2F00B9CFB2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +69,6 @@
 				41A87ADC4C96E9DB8C9F91AA /* Pods-StateManagement.debug.xcconfig */,
 				18971342D38823EDDC755C74 /* Pods-StateManagement.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -94,6 +97,7 @@
 				D07811A52B28CBCD003FB24B /* Model */,
 				D07811A42B28CBAE003FB24B /* Views */,
 				09A41D222B14C9AF00E56964 /* Assets.xcassets */,
+				D08DBC3A2B6C2A2F00B9CFB2 /* GoogleService-Info.plist */,
 				09A41D242B14C9AF00E56964 /* Preview Content */,
 			);
 			path = StateManagement;
@@ -126,6 +130,7 @@
 				D00C73432B6967720010A95D /* AuthenticationView.swift */,
 				D07811A82B28CF8F003FB24B /* StoreView.swift */,
 				D07811AC2B2A3064003FB24B /* CartView.swift */,
+				D08DBC352B6C208200B9CFB2 /* SignUpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09A41D262B14C9AF00E56964 /* Preview Assets.xcassets in Resources */,
+				D08DBC3B2B6C2A2F00B9CFB2 /* GoogleService-Info.plist in Resources */,
 				09A41D232B14C9AF00E56964 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +271,7 @@
 				09A41D1F2B14C9AE00E56964 /* StateManagementApp.swift in Sources */,
 				D07811A92B28CF8F003FB24B /* StoreView.swift in Sources */,
 				09A41D2D2B14CC2E00E56964 /* Product.swift in Sources */,
+				D08DBC362B6C208200B9CFB2 /* SignUpView.swift in Sources */,
 				D06DE0A12B336EE9008A1316 /* User.swift in Sources */,
 				D07811AB2B2A2CB8003FB24B /* Cart.swift in Sources */,
 				D00C73422B6965980010A95D /* Constants.swift in Sources */,
@@ -397,7 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"StateManagement/Preview Content\"";
-				DEVELOPMENT_TEAM = U7D887R932;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
