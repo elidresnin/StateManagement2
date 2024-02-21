@@ -12,59 +12,64 @@ enum ViewState{
 }
 
 struct ContentView: View {
-    
+    @EnvironmentObject var user: User
     @State var viewState: ViewState = .store
     var body: some View {
-        VStack {
-            //Spacer()
-            if viewState == .store {
-                StoreView()
-            }
-            else if viewState == .cart {
-                CartView()
-            }
-            else {
-                AccountView()
-            }
-            Spacer()
-            HStack{
-                Spacer()
-                Button{
-                    viewState = .store
-                }label: {
-                    VStack{
-                        Image(systemName: "gear")
-                        Text("Store")
-                    }
+        if user.loggedIn{
+            VStack {
+                //Spacer()
+                if viewState == .store {
+                    StoreView()
+                }
+                else if viewState == .cart {
+                    CartView()
+                }
+                else {
+                    AccountView()
                 }
                 Spacer()
-                Spacer()
-                Button{
-                    viewState = .cart
-                }label: {
-                    VStack{
-                        Image(systemName: "cart")
-                        Text("Cart")
+                HStack{
+                    Spacer()
+                    Button{
+                        viewState = .store
+                    }label: {
+                        VStack{
+                            Image(systemName: "gear")
+                            Text("Store")
+                        }
                     }
-                }
-                Spacer()
-                Spacer()
-                Button{
-                    viewState = .account
-                }label: {
-                    VStack{
-                        Image(systemName: "person")
-                           
-                        Text("User")
+                    Spacer()
+                    Spacer()
+                    Button{
+                        viewState = .cart
+                    }label: {
+                        VStack{
+                            Image(systemName: "cart")
+                            Text("Cart")
+                        }
                     }
+                    Spacer()
+                    Spacer()
+                    Button{
+                        viewState = .account
+                    }label: {
+                        VStack{
+                            Image(systemName: "person")
+                            
+                            Text("User")
+                        }
+                    }
+                    Spacer()
+                    
                 }
-                Spacer()
-           
+                .padding([.horizontal, .top], 10.0)
+                .padding(.bottom, 0.0)
+                .edgesIgnoringSafeArea(.vertical)
+                
             }
-            .padding([.horizontal, .top], 10.0)
-            .padding(.bottom, 0.0)
-            .edgesIgnoringSafeArea(.vertical)
-           
+        }
+        else {
+            SignUpView()
         }
     }
 }
